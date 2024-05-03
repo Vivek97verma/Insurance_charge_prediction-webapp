@@ -4,10 +4,18 @@ import numpy as np
 import pandas as pd
 
 
-lr1=pickle.load(open,('lr1_model_insurance.pkl','rb'))
-dt1=pickle.load(open,('dt1_model_insurance.pkl','rb'))
-rf1=pickle.load(open,('rf1_model_insurance.pkl','rb'))
-
+#Open the pickled file in read-binary mode
+with open('lr1_model_insurance.pkl', 'rb') as file:
+    # Load the pickled model
+    lr1 = pickle.load(file)
+#Open the pickled file in read-binary mode
+with open('dt1_model_insurance.pkl', 'rb') as file:
+    # Load the pickled model
+    dt1 = pickle.load(file)
+#Open the pickled file in read-binary mode
+with open('rf1_model_insurance.pkl', 'rb') as file:
+    # Load the pickled model
+    rf1 = pickle.load(file)
 
 st.title('Insurance charge prediction app')
 
